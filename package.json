@@ -1,0 +1,32 @@
+{
+  "name": "x402-client-sdk",
+  "version": "1.0.0",
+  "description": "Client SDK for x402 payments on Solana",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-node test/test-client.ts"
+  },
+  "keywords": [
+    "solana",
+    "x402",
+    "payment",
+    "client",
+    "usdc"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "bs58": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
