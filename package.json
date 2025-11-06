@@ -12,11 +12,14 @@
     "solana",
     "x402",
     "payment",
-    "client",
-    "usdc"
+    "client"
   ],
-  "author": "Your Name",
+  "author": "Mahima Thacker",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blockchain-hq/x402-client-sdk"
+  },
   "dependencies": {
     "@solana/web3.js": "^1.95.0",
     "bs58": "^5.0.0"
