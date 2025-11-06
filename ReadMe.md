@@ -5,21 +5,21 @@ Client-side SDK for making SOL payments in response to HTTP 402 errors.
 [![npm version](https://badge.fury.io/js/x402-client-sdk.svg)](https://www.npmjs.com/package/x402-client-sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🎯 Features
+## Features
 
-- ✅ Parse 402 payment requirements
-- ✅ Make SOL payments automatically
-- ✅ Return transaction signatures
-- ✅ Check balances
-- ✅ Devnet & Mainnet support
+- Parse 402 payment requirements
+- Make SOL payments automatically
+- Return transaction signatures
+- Check balances
+- Devnet & Mainnet support
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install x402-client-sdk
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ```typescript
 import { SolanaX402Client } from 'x402-client-sdk';
@@ -44,7 +44,7 @@ try {
 }
 ```
 
-## 📖 API
+## API
 
 ### Constructor
 
@@ -74,7 +74,7 @@ SolanaX402Client.keypairFromSecretKey(key)
 SolanaX402Client.generateKeypair()
 ```
 
-## 🔄 Axios Integration
+## Axios Integration
 
 ```typescript
 import axios from 'axios';
@@ -96,7 +96,7 @@ axios.interceptors.response.use(
 );
 ```
 
-## 💰 Wallet Management
+## Wallet Management
 
 ```typescript
 // From file
@@ -111,7 +111,7 @@ const keypair = SolanaX402Client.keypairFromSecretKey('YOUR_KEY');
 const keypair = SolanaX402Client.generateKeypair();
 ```
 
-## 🌐 Networks
+## Networks
 
 **Devnet:**
 ```bash
@@ -121,7 +121,7 @@ solana airdrop 2 YOUR_ADDRESS --url devnet
 **Mainnet:**
 Purchase SOL from exchange
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 | Error | Solution |
 |-------|----------|
@@ -129,18 +129,18 @@ Purchase SOL from exchange
 | Transaction failed | Check network and balance |
 | No payment option | Verify network matches server |
 
-## 📄 License
+## License
 
 MIT
 
-## 🤝 Contributing
+## Contributing
 
 Issues and PRs welcome!
 
-## 💬 Support
+## Support
 
 - [GitHub Issues](https://github.com/blockchain-hq/x402-client-sdk/issues)
 
 ---
 
-Made with ❤️ for Solana
+Made with love for Solana
