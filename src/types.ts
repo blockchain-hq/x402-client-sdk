@@ -1,36 +1,33 @@
-export interface PaymentRequirements {
-    version: string;
-    paymentOptions: PaymentOption[];
-  }
-  
-  export interface PaymentOption {
-    id: string;
-    scheme: string;
-    network: string;
-    recipient: string;
-    token?: string;     
-    amount: string;
-    decimals: number;
-  }
-  
-  export interface X402ClientConfig {
-    network: 'devnet' | 'mainnet-beta';
-    rpcUrl?: string;
-  }
-  
-  export interface PaymentResult {
-    signature: string;
-    paymentOptionId: string;
-    amount: number;
-    recipient: string;
-    timestamp: number;
-  }
-  
-  export interface ParsedPaymentRequest {
-    amount: number;
-    recipient: string;
-    token: string;
-    network: string;
-    decimals: number;
-    paymentOptionId: string;
-  }
+export interface X402PaymentRequirement {
+  scheme: string;
+  network: string;
+  maxAmountRequired: string;
+  resource: string;
+  description: string;
+  mimeType: string;
+  payTo: string;
+  maxTimeoutSeconds: number;
+  asset: string;
+  outputSchema?: object | null;
+  extra?: any;
+}
+
+export interface X402Response {
+  x402Version: number;
+  accepts: X402PaymentRequirement[];
+  error?: string;
+}
+
+export interface WalletInfo {
+  address: string;
+  privateKey: string;
+  network: 'devnet' | 'mainnet-beta';
+}
+
+export interface PaymentResult {
+  success: boolean;
+  signature?: string;
+  error?: string;
+  amount?: number;
+  recipient?: string;
+}
